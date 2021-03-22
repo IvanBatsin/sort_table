@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>App</title>
+</head>
+<body>
+
+  <div class="overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Error</h2>
+        <span id="close-modal">&times;</span>
+      </div>
+      <span>Sorry, but at the moment we can't get the data from the server. Please try again later :(</span>
+      <img src="assets/server.svg" alt="Server Error">
+    </div>
+  </div>
+
+
+  <header>
+    <h2>Beer</h2>
+    <div class="menu-bar">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+
+
+
+  <div class="sidebar">
+    <span id="close-sidebar">&times;</span>
+    <div class="sidebar-content">
+      <h2>Sort</h2>
+      <form id="sort-form">
+        <div class="form-group">
+          <label for="draft">Draft - Bottles</label>
+          <select name="draft" id="draft">
+            <option value="draft">Draft</option>
+            <option value="bottle">Bottles</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="id">Id</label>
+          <input name="id" type="number" min="0" id="id">
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select name="category" id="category">
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input name="price" type="number" min="0" id="price">
+        </div>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input name="title" type="text" id="title">
+        </div>
+        <div class="form-group">
+          <label for="style">Style</label>
+          <select name="style" id="style">
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="density">Density</label>
+          <input name="density" type="number" min="0" id="density">
+        </div>
+        <div class="form-group">
+          <label for="alcohol">Alcohol</label>
+          <input type="text" id="alcohol">
+        </div>
+        <div class="form-group">
+          <label for="mark">Mark</label>
+          <select name="mark" id="mark">
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tap">Tap</label>
+          <input name="tap" type="number" min="0" id="tap">
+        </div>
+        <button type="submit">Sort</button>
+      </form>
+    </div>
+  </div>
+
+
+  <main>
+    <button id="btn-load">Load data</button>
+
+    <!-- <div class="empty">
+      <span>Beer not found :(</span>
+      <p>We have a huge selection of beers, try to find something new for yourself</p>
+      <img src="assets/box.svg" alt="Empty">
+    </div> -->
+
+    <!-- <div class="overlay" hidden>
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Error</h2>
+          <span id="close-modal">&times;</span>
+        </div>
+        <span>Sorry, but at the moment we can't get the data from the server. Please try again later :(</span>
+        <img src="assets/server.svg" alt="Server Error">
+      </div>
+    </div> -->
+
+    <!-- <ul class="pagination">
+      <li>1</li>
+      <li>2</li>
+    </ul> -->
+
+    <!-- <h1>Table BeerData</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>category</th>
+          <th>price</th>
+          <th>title</th>
+          <th>style</th>
+          <th>density</th>
+          <th>alcohol</th>
+          <th>mark</th>
+          <th>tap</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="id">1</td>
+          <td data-label="category">Фильтрованное пиво</td>
+          <td data-label="price">116</td>
+          <td data-label="title">Лакинское</td>
+          <td data-label="style">International Pale Lager</td>
+          <td data-label="density">13</td>
+          <td data-label="alcohol">4.7</td>
+          <td data-label="mark">Лакинский пивзавод</td>
+          <td data-label="tap">23</td>
+        </tr>
+        <tr>
+          <td data-label="id">1</td>
+          <td data-label="category">Фильтрованное пиво</td>
+          <td data-label="price">116</td>
+          <td data-label="title">Лакинское</td>
+          <td data-label="style">International Pale Lager</td>
+          <td data-label="density">13</td>
+          <td data-label="alcohol">4.7</td>
+          <td data-label="mark">Лакинский пивзавод</td>
+          <td data-label="tap">23</td>
+        </tr>
+        <tr>
+          <td data-label="id">1</td>
+          <td data-label="category">Фильтрованное пиво</td>
+          <td data-label="price">116</td>
+          <td data-label="title">Лакинское</td>
+          <td data-label="style">International Pale Lager</td>
+          <td data-label="density">13</td>
+          <td data-label="alcohol">4.7</td>
+          <td data-label="mark">Лакинский пивзавод</td>
+          <td data-label="tap">23</td>
+        </tr>
+      </tbody>
+    </table> -->
+
+      <!-- <ul class="pagination">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul> -->
+  </main>
+</body>
+</html>
